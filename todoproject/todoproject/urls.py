@@ -21,13 +21,12 @@ from todoapp.views import todoappView
 
 from todoapp.views import addTodoView
 
-from todoapp.views import deleteTodoAppView
+from todoapp.views import deleteTodoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todoAppView/', todoappView),
     path('', todoappView),
     path('addTodoItem/', addTodoView),
-    path('deleteTodoItem/', deleteTodoAppView),
-    path('deleteTodoView', deleteTodoAppView)
+    path('deleteTodoItem/<int:i>/', deleteTodoView),
 ]
